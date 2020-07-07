@@ -5,11 +5,13 @@
 x = 12
 
 def change_x():
+    global x 
     x = 99
 
 change_x()
 
 # This prints 12. What do we have to modify in change_x() to get it to print 99?
+    # add the global variable
 print(x)
 
 
@@ -19,12 +21,13 @@ def outer():
     y = 120
 
     def inner():
-        y = 999
+       global y
+       y = 999
 
     inner()
 
-    # This prints 120. What do we have to change in inner() to get it to print
-    # 999?
+    # This prints 120. What do we have to change in inner() to get it to print 999
+        #  add global variable inside the nested function
     # Note: Google "python nested function scope".
     print(y)
 
