@@ -35,6 +35,6 @@ print(cap_a)
 
 x = input("Enter comma-separated numbers: ").split(',')
 
-user_list = [int(n) for n in x]
+user_list = [n for n in x if int(n) % 2 == 0]
 
 print(user_list)
